@@ -37,6 +37,22 @@ public class RepositorioLutadorJDBC implements InterfaceLutador {
 	@Override
 	public void editarLutador(Lutador lutador) {
 
+		try {
+			
+			PreparedStatement ps = GerenteConexaoJDBC.getConexao().prepareStatement("UPDATE tb_lutador SET nome = ?, sexo = ?, cpf = ? WHERE id = ?");
+
+			ps.setString(1, lutador.getNome());
+			ps.setString(2, lutador.getSexo());
+			ps.setString(3, lutador.getcpf());
+			ps.setInt(4, lutador.getId());
+
+			ps.executeUpdate();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		
 	}
 
 	@Override
