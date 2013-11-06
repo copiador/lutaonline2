@@ -32,7 +32,7 @@ public class Controladora2 extends HttpServlet {
 		acoes.put("cadastrar", new AcaoCadastrarLutador());
 		acoes.put("listarLutadores", new AcaoListarLutador());
 		acoes.put("editarLutador", new AcaoEditarLutador());
-		acoes.put("excluiLutador", new AcaoExcluirLutador());
+		acoes.put("excluirLutador", new AcaoExcluirLutador());
 		acoes.put("buscarLutador", new AcaoBuscarLutadorID());
 	}
 
@@ -42,6 +42,8 @@ public class Controladora2 extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
+		
+		
 		doPost(request, response);
 	}
 

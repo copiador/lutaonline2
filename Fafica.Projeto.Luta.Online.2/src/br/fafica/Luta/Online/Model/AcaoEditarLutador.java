@@ -40,7 +40,7 @@ public class AcaoEditarLutador implements InterfaceAcao {
 
 		// encaminha a requição para página de listar todos os clientes
 		RequestDispatcher dispatcher = request
-				.getRequestDispatcher("controlador2?acao=listarLutadores");
+				.getRequestDispatcher("Controladora2?acao=listarLutadores");
 		dispatcher.forward(request, response);
 
 	}

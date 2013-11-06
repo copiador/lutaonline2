@@ -3,7 +3,7 @@
 <div id="main">
 
 
-	<form action="ServletLutadorRediret" method="get">
+	<form action="Controladora2" method="get">
 		<input type="hidden" name="acao" value="cadastrar">
 		
 		<fieldset class="thumbnail inner-border">

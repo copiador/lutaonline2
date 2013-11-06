@@ -3,6 +3,7 @@
 <div id="main">
 
 	<form action="Controladora2" method="get">
+		<input type="hidden" name="id" value="${lutador.id}">
 		<input type="hidden" name="acao" value="editarLutador">
 		<fieldset class="thumbnail inner-border">
 		

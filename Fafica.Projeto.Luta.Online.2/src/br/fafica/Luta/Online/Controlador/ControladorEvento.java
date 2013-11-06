@@ -2,12 +2,12 @@ package br.fafica.Luta.Online.Controlador;
 
 import br.fafica.Luta.Online.Dao.RepositorioLutadorJDBC;
 
-public class ControlerEvento {
+public class ControladorEvento {
 	
 	private RepositorioLutadorJDBC rp;
 	
 	
-	public ControlerEvento() {
+	public ControladorEvento() {
 		rp = new RepositorioLutadorJDBC();
 	}
 

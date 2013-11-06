@@ -31,7 +31,7 @@
 					<td>${lutador.nome}</td>
 					<td>${lutador.cpf}</td>					
 					<td><a href="Controladora2?acao=buscarLutador&id=${lutador.id}">Editar</a></td>
-					<td>Excluir</td>
+					<td><a href="Controladora2?acao=excluirLutador&id=${lutador.id}">Excluir</a></td>
 				</tr>
 
 			</c:forEach>
