@@ -37,28 +37,20 @@ public class RepositorioLutadorJDBC implements InterfaceLutador {
 	@Override
 	public void editarLutador(Lutador lutador) {
 
-		try {
-			PreparedStatement ps = GerenteConexaoJDBC
-					.getConexao()
-					.prepareStatement(
-							"update tb_lutador set nome = ? and sexo = ? and faixa = ? and cpf = ? WHERE id = ?");
+	}
 
-			ps.setString(1, lutador.getNome());
-			ps.setString(2, lutador.getSexo());
-			ps.setString(3, lutador.getFaixa());
-			ps.setString(4, lutador.getcpf());
+	@Override
+	public void excluirLutador(Lutador lutador) {
+		
+		try {
+			PreparedStatement ps = GerenteConexaoJDBC.getConexao().prepareStatement("DELETE FROM tb_lutador WHERE id = ?");
+			ps.setInt(1, lutador.getId());
 
 			ps.executeUpdate();
 			ps.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-
-	}
-
-	@Override
-	public void excluirLutador(Lutador lutador) {
-		// TODO Auto-generated method stub
 
 	}
 

@@ -11,7 +11,9 @@ public class mainTeste {
   
 	public static void main(String[] args) {
 
-		 
+		Fachada fachada = Fachada.getInstanceFachada(); 
+		
+		
 		Lutador lutador = new Lutador();
 		Lutador lutador2 = new Lutador();
 		
@@ -26,10 +28,8 @@ public class mainTeste {
 		//lutador.setSexo("feminino");
 		//lutador.setcpf("088999999");
 		
-		
-		
-		Fachada.getInstanceFachada().controler.editarLutador(lutador2);
-		
+		//fachada.controler.editarLutador(lutador2);
+		fachada.controler.excluirLutador(lutador2);
 		System.out.println(lutador2.getNome());
 		
 		//Controler controler = new Controler();
