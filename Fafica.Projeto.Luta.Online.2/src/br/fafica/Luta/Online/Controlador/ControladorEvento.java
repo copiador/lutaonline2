@@ -1,14 +1,46 @@
 package br.fafica.Luta.Online.Controlador;
 
-import br.fafica.Luta.Online.Dao.RepositorioLutadorJDBC;
+import java.util.List;
 
-public class ControladorEvento {
+import br.fafica.Luta.Online.Dao.RepositorioEventoJDBC;
+import br.fafica.Luta.Online.Interface.InterfaceEvento;
+import br.fafica.Luta.Online.Model.Evento;
+
+public class ControladorEvento implements InterfaceEvento {
 	
-	private RepositorioLutadorJDBC rp;
+	private RepositorioEventoJDBC rp;
 	
 	
 	public ControladorEvento() {
-		rp = new RepositorioLutadorJDBC();
+		rp = new RepositorioEventoJDBC();
+	}
+
+
+	@Override
+	public void cadastrarEvento(Evento evento) {
+		rp.cadastrarEvento(evento);
+		
+	}
+
+
+	@Override
+	public void excluirEvento(Evento evento) {
+		rp.excluirEvento(evento);
+		
+	}
+
+
+	@Override
+	public List<Evento> listarEvento() {
+		
+		return rp.listarEvento();
+	}
+
+
+	@Override
+	public Evento buscarEventoID(Evento evento) {
+		
+		return rp.buscarEventoID(evento);
 	}
 
 }

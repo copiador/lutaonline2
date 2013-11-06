@@ -4,10 +4,11 @@
 	<form action="" method="get">
 		<fieldset class="thumbnail inner-border">
 			
-			<label>Nome do Evento</label> 
-			<input type="text" placeholder="ID" class="span1">
+			
 			<label>Nome do Evento</label> 
 			<input type="text" placeholder="Digite o nome do evento" class="span5">
+			<label>Data do Evento</label> 
+			<input type="text" placeholder="ID" class="span1"> 
 			  
 			<input type="submit" value="Criar" class="btn-large btn btn-danger">
 		</fieldset>

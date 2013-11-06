@@ -10,10 +10,11 @@ import br.fafica.Luta.Online.Model.Lutador;
 public class Controler implements InterfaceControlador{
 	
 	private ControladorLutador controleLutador;
-	
+	private ControladorEvento controladorEvento;
 
 	public Controler(){
 		this.controleLutador = new ControladorLutador();
+		this.controladorEvento = new ControladorEvento();
 	
 	}
 	//Lutador
@@ -50,23 +51,21 @@ public class Controler implements InterfaceControlador{
 	
 	@Override
 	public void cadastrarEvento(Evento evento) {
-		// TODO Auto-generated method stub
+		controladorEvento.cadastrarEvento(evento);
 		
 	}
 	@Override
-	public void excluirEvento(Evento Evento) {
-		// TODO Auto-generated method stub
+	public void excluirEvento(Evento evento) {
+		controladorEvento.excluirEvento(evento);
 		
 	}
 	@Override
 	public List<Evento> listarEvento() {
-		// TODO Auto-generated method stub
-		return null;
+		return controladorEvento.listarEvento();
 	}
 	@Override
 	public Evento buscarEventoID(Evento evento) {
-		// TODO Auto-generated method stub
-		return null;
+		return controladorEvento.buscarEventoID(evento);
 	}
 	
 	
