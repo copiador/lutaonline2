@@ -9,7 +9,7 @@ import java.util.List;
 
 import br.fafica.Luta.Online.Interface.InterfaceEvento;
 import br.fafica.Luta.Online.Model.Evento;
-import br.fafica.Luta.Online.Model.Lutador;
+
 
 public class RepositorioEventoJDBC implements InterfaceEvento {
 

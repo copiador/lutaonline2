@@ -38,7 +38,7 @@
 					<li><a href="#">Campeonato</a></li>
 					<li><a href="#">Fotos</a></li>
 					<li><a href="#">Regras do Jiu-Jitsu</a></li>
-					<li><a href="TelaLogar.jsp">Logar</a></li>
+					<li><a href="TelaCadastroDeAtletasAdministrador.jsp">Logar</a></li>
 				</ul>
 
 			</nav>
