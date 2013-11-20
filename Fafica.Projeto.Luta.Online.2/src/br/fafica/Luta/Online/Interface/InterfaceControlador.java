@@ -4,6 +4,7 @@ import java.util.List;
 
 import br.fafica.Luta.Online.Model.Evento;
 import br.fafica.Luta.Online.Model.Lutador;
+import br.fafica.Luta.Online.Model.Usuario;
 
 public interface InterfaceControlador {
 	
@@ -17,5 +18,8 @@ public interface InterfaceControlador {
 	public void excluirEvento(Evento Evento);
 	public List<Evento> listarEvento();
 	public Evento buscarEventoID(Evento evento);
+//Usuario
+	public List<Usuario> ListarUsuario();
+	public void cadastrarUsuario(Usuario usuario);
 	
 }
