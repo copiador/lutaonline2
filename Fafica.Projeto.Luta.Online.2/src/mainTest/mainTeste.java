@@ -2,12 +2,9 @@ package mainTest;
 
 
 
-import java.util.ArrayList;
-import java.util.List;
 
-import br.fafica.Luta.Online.Fachada.Fachada;
-import br.fafica.Luta.Online.Model.Evento;
-import br.fafica.Luta.Online.Model.Lutador;
+import br.fafica.Luta.Online.Model.AcaoLogar;
+
 import br.fafica.Luta.Online.Model.Usuario;
 
 
@@ -15,19 +12,17 @@ public class mainTeste {
   
 	public static void main(String[] args) {
 
-		Fachada fachada = Fachada.getInstanceFachada(); 
-		List<Evento> eventos = new ArrayList<Evento>();
-		List<Usuario> usuarios = new ArrayList<Usuario>();
+		AcaoLogar acaoLogar = new AcaoLogar();
+		
 		Usuario usuario = new Usuario();
+		Usuario logado = new Usuario();
+		
 		usuario.setLogin("joao");
-		usuario.setEmail("jessemarquesads@gmail.com");
 		usuario.setSenha("favoritos");
 		
-		fachada.controler.cadastrarUsuario(usuario);
+		logado = acaoLogar.usuarioExisteNoBanco(usuario);
 		
-		//usuarios = fachada.controler.ListarUsuario();
-	
-	
+		System.out.println(logado.getEmail());
 		
 		//lutador.setNome("julia");
 		//lutador.setFaixa("amarela");
