@@ -4,9 +4,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import br.fafica.Luta.Online.Fachada.Fachada;
 import br.fafica.Luta.Online.Interface.InterfaceAcao;
@@ -36,8 +38,19 @@ public class AcaoLogar implements InterfaceAcao {
 		Usuario usuarioLogado = new Usuario();
 		
 		usuarioLogado = usuarioExisteNoBanco(usuario);
-
-		
+		//se o usuario não existe, redireciona a pagina para usuario tela de login com a mensagem não cadastrado
+		if(usuarioLogado == null){
+			request.setAttribute("logininvalido", "usuario não cadastrado");
+			RequestDispatcher dispatcher = 
+					request.getRequestDispatcher("/TelaLogar.jsp");
+			dispatcher.forward(request, response);
+		}else {
+			//caso o usuario exista redireciona a pagina para pagina de login
+			HttpSession sessao = request.getSession();
+			sessao.setAttribute("usuario", usuarioLogado);
+			response.sendRedirect("TelaNovoEvento.jsp");
+		}
+	
 		
 	}
 

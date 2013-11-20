@@ -17,7 +17,7 @@ public class mainTeste {
 		Usuario usuario = new Usuario();
 		Usuario logado = new Usuario();
 		
-		usuario.setLogin("joao");
+		usuario.setLogin("jose");
 		usuario.setSenha("favoritos");
 		
 		logado = acaoLogar.usuarioExisteNoBanco(usuario);

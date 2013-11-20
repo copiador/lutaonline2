@@ -1,15 +1,16 @@
 <%@include file="top.jsp"%>
 		<div id="navAdm">
+		BEM VINDO: ${usuario.login}
 			<div class="tabbable">
 				<nav>
 					<ul class="nav nav-tabs">
 						<li><a href="TelaNovoEvento.jsp" data-toggle="tab">Novo
 								Evento</a></li>
-						<li><a href="#tab2" data-toggle="tab">Administrar Evento</a></li>
+						<li><a href="Controladora2?acao=listarEvento">Listar Evento</a></li>
 						<li><a href="#">Consultar Chaves</a></li>
 						<li><a href="TelaCadastroDeAtletasAdministrador.jsp">Cadastrar Atleta</a></li>
 						<li><a href="Controladora2?acao=listarLutadores">Listar Atletas</a></li>
-						<li><a href="#">Sair</a></li>
+						<li><a href="Controladora2?acao=logount">Sair</a></li>
 					</ul>
 				</nav>
 				<div class="tab-content">

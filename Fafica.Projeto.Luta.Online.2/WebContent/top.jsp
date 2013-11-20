@@ -3,6 +3,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page  import="java.util.List" %>
 <%@ page  import="br.fafica.Luta.Online.Model.Lutador" %> 
+<%@ page  import="br.fafica.Luta.Online.Model.Usuario" %> 
+<%Usuario usuario = (Usuario) session.getAttribute("usuarioLogado");%>
 
 <!DOCTYPE html>
 <html lang="pt-br">
