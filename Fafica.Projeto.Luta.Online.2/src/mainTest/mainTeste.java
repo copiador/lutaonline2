@@ -2,7 +2,11 @@ package mainTest;
 
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 import br.fafica.Luta.Online.Fachada.Fachada;
+import br.fafica.Luta.Online.Model.Evento;
 import br.fafica.Luta.Online.Model.Lutador;
 
 
@@ -11,16 +15,16 @@ public class mainTeste {
 	public static void main(String[] args) {
 
 		Fachada fachada = Fachada.getInstanceFachada(); 
+		List<Evento> eventos = new ArrayList<Evento>();
 		
+		Evento evento = new Evento();
+		Evento evento2 = new Evento();
 		
-		Lutador lutador = new Lutador();
-		Lutador lutador2 = new Lutador();
+		evento.setId(4);
 		
-		lutador2.setId(6);
-		lutador2.setNome("mauricio");
-		lutador2.setSexo("masculino");
-		lutador2.setFaixa("branca");
-		lutador2.setcpf("8888888888");
+		evento2 =  fachada.controler.buscarEventoID(evento);
+		
+		System.out.println(evento2.getId());
 		
 		//lutador.setNome("julia");
 		//lutador.setFaixa("amarela");
@@ -28,8 +32,7 @@ public class mainTeste {
 		//lutador.setcpf("088999999");
 		
 		//fachada.controler.editarLutador(lutador2);
-		fachada.controler.editarLutador(lutador2);
-		System.out.println(lutador2.getNome());
+
 		
 		//Controler controler = new Controler();
 		//controler.cadastrarLutador(lutador);

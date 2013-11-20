@@ -11,11 +11,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.fafica.Luta.Online.Interface.InterfaceAcao;
+import br.fafica.Luta.Online.Model.AcaoBuscarEventoID;
 import br.fafica.Luta.Online.Model.AcaoBuscarLutadorID;
+import br.fafica.Luta.Online.Model.AcaoCadastrarEvento;
 import br.fafica.Luta.Online.Model.AcaoCadastrarLutador;
 import br.fafica.Luta.Online.Model.AcaoEditarLutador;
+import br.fafica.Luta.Online.Model.AcaoExcluirEvento;
 import br.fafica.Luta.Online.Model.AcaoExcluirLutador;
+import br.fafica.Luta.Online.Model.AcaoListarEvento;
 import br.fafica.Luta.Online.Model.AcaoListarLutador;
+import br.fafica.Luta.Online.Model.AcaoLogar;
+import br.fafica.Luta.Online.Model.AcaoLogount;
+
 
 /**
  * Servlet implementation class Controladora2
@@ -34,6 +41,15 @@ public class Controladora2 extends HttpServlet {
 		acoes.put("editarLutador", new AcaoEditarLutador());
 		acoes.put("excluirLutador", new AcaoExcluirLutador());
 		acoes.put("buscarLutador", new AcaoBuscarLutadorID());
+		
+		acoes.put("logar", new AcaoLogar());
+		acoes.put("logount", new AcaoLogount());
+		
+		acoes.put("cadastrarEvento", new AcaoCadastrarEvento());
+		acoes.put("excluirEvento", new AcaoExcluirEvento());
+		acoes.put("listarEvento", new AcaoListarEvento());
+		acoes.put("buscarEvento", new AcaoBuscarEventoID());
+		
 	}
 
 	/**
