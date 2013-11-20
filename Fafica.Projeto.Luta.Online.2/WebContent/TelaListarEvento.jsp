@@ -3,9 +3,7 @@
 <div id="main">
 
 	<fieldset class="thumbnail inner-border">
-	
-
-		
+	${mensagem}
 		<table class="table table-bordered">
 			<thead>
 				<tr>
@@ -14,11 +12,11 @@
 					<th>DATA</th>
 				</tr>
 			</thead>
-			
-			<c:if test="${empty lutadores}">
+
+			<c:if test="${empty eventos}">
 				<tr>
 					<td align="center">
-						<p>Nenhum Cliente cadastrado.</p>
+						<p>Nenhum Evento Cadastrado</p>
 					</td>
 				</tr>
 			</c:if>
@@ -29,12 +27,12 @@
 
 					<td>${evento.id}</td>
 					<td>${evento.nome}</td>
-					<td>${evento.cpf}</td>					
+					<td>${evento.data}</td>
 					<td><a href="Controladora2?acao=excluirEvento&id=${evento.id}">Excluir</a></td>
 				</tr>
 
 			</c:forEach>
-			
+
 
 		</table>
 
