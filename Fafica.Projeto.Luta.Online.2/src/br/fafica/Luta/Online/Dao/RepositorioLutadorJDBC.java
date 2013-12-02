@@ -140,7 +140,7 @@ public class RepositorioLutadorJDBC implements InterfaceLutador {
 		// TODO Auto-generated method stub
 		String sql = "insert into tb_luta_evento values (?,?,?)";
 		PreparedStatement st;
-		System.out.println("chegou aqui no final");
+		
 		try {
 			System.out.println("chegou aqui no final");
 			st = GerenteConexaoJDBC.getConexao().prepareStatement(sql);

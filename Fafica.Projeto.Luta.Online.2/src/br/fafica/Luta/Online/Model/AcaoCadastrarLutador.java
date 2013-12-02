@@ -43,8 +43,12 @@ public class AcaoCadastrarLutador implements InterfaceAcao {
 		evento.setId(eventoId);
 		lutador.setEvento(evento);
 
+		//cadastra o lutador
 		fachada.controler.cadastrarLutador(lutador);
-		
+		//pega o ultimo lutador cadastrado
+		Lutador ultimoLutadorCadastrado = fachada.controler.pegarUltimoLutadorCadastrado();
+		lutador.setId(ultimoLutadorCadastrado.getId());
+		//cadastra o lutador em um evento
 		fachada.controler.cadastrarEventoLutador(lutador);
 		
 		// invoca o método 'inserir' do DAO passando o objeto cliente a ser
