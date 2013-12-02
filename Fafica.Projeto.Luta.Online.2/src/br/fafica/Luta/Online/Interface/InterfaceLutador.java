@@ -11,5 +11,6 @@ public interface InterfaceLutador {
 	public List<Lutador> listarLutadores();
 	public Lutador buscarID(Lutador lutador);
 	public void cadastrarLutadorEvento(Lutador lutador);
+	public Lutador pegarUltimoLutadorCadastrado();
 
 }

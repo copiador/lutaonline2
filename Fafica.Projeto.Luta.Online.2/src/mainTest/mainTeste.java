@@ -1,41 +1,33 @@
 package mainTest;
 
-
-
-
-import br.fafica.Luta.Online.Model.AcaoLogar;
-
-import br.fafica.Luta.Online.Model.Usuario;
-
+import br.fafica.Luta.Online.Fachada.Fachada;
+import br.fafica.Luta.Online.Model.Evento;
+import br.fafica.Luta.Online.Model.Lutador;
 
 public class mainTeste {
-  
+
 	public static void main(String[] args) {
 
-		AcaoLogar acaoLogar = new AcaoLogar();
-		
-		Usuario usuario = new Usuario();
-		Usuario logado = new Usuario();
-		
-		usuario.setLogin("jose");
-		usuario.setSenha("favoritos");
-		
-		logado = acaoLogar.usuarioExisteNoBanco(usuario);
-		
-		System.out.println(logado.getEmail());
-		
-		//lutador.setNome("julia");
-		//lutador.setFaixa("amarela");
-		//lutador.setSexo("feminino");
-		//lutador.setcpf("088999999");
-		
-		//fachada.controler.editarLutador(lutador2);
+		Fachada fachada = Fachada.getInstanceFachada();
 
-		
-		//Controler controler = new Controler();
-		//controler.cadastrarLutador(lutador);
-		//Fachada fachada = Fachada.getInstanceFachada();
-		//fachada.controler.cadastrarLutador(lutador);
-		
+		Evento evento = new Evento();
+		evento.setId(6);
+
+		Lutador lutadorAux = fachada.controler.pegarUltimoLutadorCadastrado();
+		lutadorAux.setEvento(evento);
+		fachada.controler.cadastrarEventoLutador(lutadorAux);
+
+		// lutador.setNome("julia");
+		// lutador.setFaixa("amarela");
+		// lutador.setSexo("feminino");
+		// lutador.setcpf("088999999");
+
+		// fachada.controler.editarLutador(lutador2);
+
+		// Controler controler = new Controler();
+		// controler.cadastrarLutador(lutador);
+		// Fachada fachada = Fachada.getInstanceFachada();
+		// fachada.controler.cadastrarLutador(lutador);
+
 	}
 }

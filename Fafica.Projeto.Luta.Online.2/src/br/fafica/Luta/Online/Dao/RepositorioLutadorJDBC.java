@@ -28,21 +28,21 @@ public class RepositorioLutadorJDBC implements InterfaceLutador {
 			st.executeUpdate();
 			System.out.println("cadastrou");
 			st.close();
-			
-			
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 	}
 
-	
-
 	@Override
 	public void editarLutador(Lutador lutador) {
 
 		try {
-			
-			PreparedStatement ps = GerenteConexaoJDBC.getConexao().prepareStatement("UPDATE tb_lutador SET nome = ?, sexo = ?, cpf = ? WHERE id = ?");
+
+			PreparedStatement ps = GerenteConexaoJDBC
+					.getConexao()
+					.prepareStatement(
+							"UPDATE tb_lutador SET nome = ?, sexo = ?, cpf = ? WHERE id = ?");
 
 			ps.setString(1, lutador.getNome());
 			ps.setString(2, lutador.getSexo());
@@ -55,14 +55,14 @@ public class RepositorioLutadorJDBC implements InterfaceLutador {
 			e.printStackTrace();
 		}
 
-		
 	}
 
 	@Override
 	public void excluirLutador(Lutador lutador) {
-		
+
 		try {
-			PreparedStatement ps = GerenteConexaoJDBC.getConexao().prepareStatement("DELETE FROM tb_lutador WHERE id = ?");
+			PreparedStatement ps = GerenteConexaoJDBC.getConexao()
+					.prepareStatement("DELETE FROM tb_lutador WHERE id = ?");
 			ps.setInt(1, lutador.getId());
 
 			ps.executeUpdate();
@@ -135,8 +135,6 @@ public class RepositorioLutadorJDBC implements InterfaceLutador {
 
 	}
 
-
-
 	@Override
 	public void cadastrarLutadorEvento(Lutador lutador) {
 		// TODO Auto-generated method stub
@@ -147,17 +145,37 @@ public class RepositorioLutadorJDBC implements InterfaceLutador {
 			System.out.println("chegou aqui no final");
 			st = GerenteConexaoJDBC.getConexao().prepareStatement(sql);
 			st.setInt(1, lutador.getEvento().getId());
-			st.setString(2, lutador.getCpf());
-			st.setInt(1, 0);
+			st.setInt(2, lutador.getId());
+			st.setInt(3, 0);
 			System.out.println("chegou aqui no final");
 			st.executeUpdate();
 			System.out.println("cadastrou");
 			st.close();
-			
-			
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 	}
 
+	@Override
+	public Lutador pegarUltimoLutadorCadastrado() {
+
+		Lutador lutador = new Lutador();
+
+		PreparedStatement ps;
+		try {
+			ps = GerenteConexaoJDBC.getConexao().prepareStatement(
+					"SELECT max(id) from tb_lutador");
+
+			ResultSet rs = ps.executeQuery();
+
+			if (rs.next()) {
+				lutador.setId(rs.getInt(1));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return lutador;
+	}
 }

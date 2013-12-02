@@ -51,6 +51,12 @@ public class ControladorLutador implements InterfaceLutador {
 		
 	}
 
+	@Override
+	public Lutador pegarUltimoLutadorCadastrado() {
+		
+		return rp.pegarUltimoLutadorCadastrado();
+	}
+
 	
 
 

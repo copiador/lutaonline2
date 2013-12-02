@@ -47,9 +47,13 @@ public class Controler implements InterfaceControlador{
 	@Override
 	public Lutador buscarID(Lutador lutador) {
 		return controleLutador.buscarID(lutador);
+			
+	}
+	
+	@Override
+	public Lutador pegarUltimoLutadorCadastrado() {
 		
-		
-		
+		return controleLutador.pegarUltimoLutadorCadastrado();
 	}
 	
 	@Override
@@ -90,6 +94,7 @@ public class Controler implements InterfaceControlador{
 		controladorUsuario.cadastrarUsuario(usuario);
 		
 	}
+
 
 	
 	
