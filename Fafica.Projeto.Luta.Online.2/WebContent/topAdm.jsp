@@ -8,7 +8,7 @@
 								Evento</a></li>
 						<li><a href="Controladora2?acao=listarEvento">Listar Evento</a></li>
 						<li><a href="#">Consultar Chaves</a></li>
-						<li><a href="TelaCadastroDeAtletasAdministrador.jsp">Cadastrar Atleta</a></li>
+						<li><a href="Controladora2?acao=listarEventoTelaCadastro">Cadastrar Atleta</a></li>
 						<li><a href="Controladora2?acao=listarLutadores">Listar Atletas</a></li>
 						<li><a href="Controladora2?acao=logount">Sair</a></li>
 					</ul>

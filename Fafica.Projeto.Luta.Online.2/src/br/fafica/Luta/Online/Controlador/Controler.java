@@ -48,6 +48,14 @@ public class Controler implements InterfaceControlador{
 	public Lutador buscarID(Lutador lutador) {
 		return controleLutador.buscarID(lutador);
 		
+		
+		
+	}
+	
+	@Override
+	public void cadastrarEventoLutador(Lutador lutador) {
+		controleLutador.cadastrarLutadorEvento(lutador);
+		
 	}
 	
 	//eventos
@@ -82,6 +90,7 @@ public class Controler implements InterfaceControlador{
 		controladorUsuario.cadastrarUsuario(usuario);
 		
 	}
+
 	
 	
 	

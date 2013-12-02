@@ -13,6 +13,7 @@ public interface InterfaceControlador {
 	public void excluirLutador(Lutador lutador);
 	public List<Lutador> listarLutadores();
 	public Lutador buscarID(Lutador lutador);
+	public void cadastrarEventoLutador(Lutador lutador);
 //eventos
 	public void cadastrarEvento(Evento evento);
 	public void excluirEvento(Evento Evento);

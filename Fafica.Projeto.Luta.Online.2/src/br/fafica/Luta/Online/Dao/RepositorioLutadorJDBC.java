@@ -28,11 +28,14 @@ public class RepositorioLutadorJDBC implements InterfaceLutador {
 			st.executeUpdate();
 			System.out.println("cadastrou");
 			st.close();
+			
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-
 	}
+
+	
 
 	@Override
 	public void editarLutador(Lutador lutador) {
@@ -130,6 +133,14 @@ public class RepositorioLutadorJDBC implements InterfaceLutador {
 		}
 		return null;
 
+	}
+
+
+
+	@Override
+	public void cadastrarLutadorEvento(Lutador lutador) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

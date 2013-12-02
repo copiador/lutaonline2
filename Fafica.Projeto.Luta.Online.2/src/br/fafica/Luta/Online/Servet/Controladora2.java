@@ -19,6 +19,7 @@ import br.fafica.Luta.Online.Model.AcaoEditarLutador;
 import br.fafica.Luta.Online.Model.AcaoExcluirEvento;
 import br.fafica.Luta.Online.Model.AcaoExcluirLutador;
 import br.fafica.Luta.Online.Model.AcaoListarEvento;
+import br.fafica.Luta.Online.Model.AcaoListarEventoTelaCadastrarLutador;
 import br.fafica.Luta.Online.Model.AcaoListarLutador;
 import br.fafica.Luta.Online.Model.AcaoLogar;
 import br.fafica.Luta.Online.Model.AcaoLogount;
@@ -49,6 +50,7 @@ public class Controladora2 extends HttpServlet {
 		acoes.put("excluirEvento", new AcaoExcluirEvento());
 		acoes.put("listarEvento", new AcaoListarEvento());
 		acoes.put("buscarEvento", new AcaoBuscarEventoID());
+		acoes.put("listarEventoTelaCadastro", new AcaoListarEventoTelaCadastrarLutador());
 		
 	}
 

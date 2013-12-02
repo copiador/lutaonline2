@@ -10,5 +10,6 @@ public interface InterfaceLutador {
 	public void excluirLutador(Lutador lutador);
 	public List<Lutador> listarLutadores();
 	public Lutador buscarID(Lutador lutador);
+	public void cadastrarLutadorEvento(Lutador lutador);
 
 }

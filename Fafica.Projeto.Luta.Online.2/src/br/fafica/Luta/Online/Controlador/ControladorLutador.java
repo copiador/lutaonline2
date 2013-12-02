@@ -45,6 +45,12 @@ public class ControladorLutador implements InterfaceLutador {
 		
 	}
 
+	@Override
+	public void cadastrarLutadorEvento(Lutador lutador) {
+		rp.cadastrarLutadorEvento(lutador);
+		
+	}
+
 	
 
 
