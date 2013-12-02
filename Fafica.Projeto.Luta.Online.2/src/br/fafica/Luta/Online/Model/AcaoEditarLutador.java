@@ -32,7 +32,7 @@ public class AcaoEditarLutador implements InterfaceAcao {
 		lutador.setId(id);
 		lutador.setNome(nome);
 		lutador.setSexo(sexo);
-		lutador.setcpf(cpf);
+		lutador.setCpf(cpf);
 		
 		fachada.controler.editarLutador(lutador);
 

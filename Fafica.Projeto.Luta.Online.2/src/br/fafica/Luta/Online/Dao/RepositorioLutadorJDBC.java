@@ -23,7 +23,7 @@ public class RepositorioLutadorJDBC implements InterfaceLutador {
 			st.setString(1, lutador.getNome());
 			st.setString(2, lutador.getSexo());
 			st.setString(3, lutador.getFaixa());
-			st.setString(4, lutador.getcpf());
+			st.setString(4, lutador.getCpf());
 			System.out.println("chegou aqui no final");
 			st.executeUpdate();
 			System.out.println("cadastrou");
@@ -46,7 +46,7 @@ public class RepositorioLutadorJDBC implements InterfaceLutador {
 
 			ps.setString(1, lutador.getNome());
 			ps.setString(2, lutador.getSexo());
-			ps.setString(3, lutador.getcpf());
+			ps.setString(3, lutador.getCpf());
 			ps.setInt(4, lutador.getId());
 
 			ps.executeUpdate();
@@ -88,7 +88,7 @@ public class RepositorioLutadorJDBC implements InterfaceLutador {
 				Lutador lutador = new Lutador();
 				lutador.setId(id);
 				lutador.setNome(nome);
-				lutador.setcpf(cpf);
+				lutador.setCpf(cpf);
 
 				lutadorlist.add(lutador);
 			}
@@ -123,7 +123,7 @@ public class RepositorioLutadorJDBC implements InterfaceLutador {
 				setlutador.setNome(nome);
 				setlutador.setSexo(sexo);
 				setlutador.setFaixa(faixa);
-				setlutador.setcpf(cpf);
+				setlutador.setCpf(cpf);
 
 				return setlutador;
 			}
@@ -140,7 +140,24 @@ public class RepositorioLutadorJDBC implements InterfaceLutador {
 	@Override
 	public void cadastrarLutadorEvento(Lutador lutador) {
 		// TODO Auto-generated method stub
-		
+		String sql = "insert into tb_luta_evento values (?,?,?)";
+		PreparedStatement st;
+		System.out.println("chegou aqui no final");
+		try {
+			System.out.println("chegou aqui no final");
+			st = GerenteConexaoJDBC.getConexao().prepareStatement(sql);
+			st.setInt(1, lutador.getEvento().getId());
+			st.setString(2, lutador.getCpf());
+			st.setInt(1, 0);
+			System.out.println("chegou aqui no final");
+			st.executeUpdate();
+			System.out.println("cadastrou");
+			st.close();
+			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 
 }

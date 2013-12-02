@@ -33,14 +33,6 @@ public class Lutador {
 		this.faixa = faixa;
 	}
 
-	public String getcpf() {
-		return cpf;
-	}
-
-	public void setcpf(String cpf) {
-		this.cpf = cpf;
-	}
-
 	public int getId() {
 		return id;
 	}
