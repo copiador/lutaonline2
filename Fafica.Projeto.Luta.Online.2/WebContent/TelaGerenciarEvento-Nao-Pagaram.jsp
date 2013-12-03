@@ -14,7 +14,7 @@
 				</tr>
 			</thead>
 
-			<c:if test="${empty eventos}">
+			<c:if test="${empty listaLutador}">
 				<tr>
 					<td align="center">
 						<p>Nenhum Evento Cadastrado</p>
@@ -22,14 +22,14 @@
 				</tr>
 			</c:if>
 
-			<c:forEach items="${listalutador}" var="lutador">
+			<c:forEach items="${listaLutador}" var="lutador">
 
 				<tr class="error">
 
 					<td>${lutador.id}</td>
 					<td>${lutador.nome}</td>
 					<td>${lutador.cpf}</td>
-					<td><a href="Controladora2?acao=excluirEvento&id=${evento.id}">Validar Pagamento</a></td>
+					<td><a href="Controladora2?acao=validarPagamentoLutador&id=${lutador.id}">Validar Pagamento</a></td>
 				</tr>
 
 			</c:forEach>
