@@ -12,14 +12,14 @@ import javax.servlet.http.HttpServletResponse;
 import br.fafica.Luta.Online.Fachada.Fachada;
 import br.fafica.Luta.Online.Interface.InterfaceAcao;
 
-public class AcaoListarLutardorEventoNaoPagaramAtualizado implements InterfaceAcao {
+public class AcaoPrepararChavesDoEvento implements InterfaceAcao {
 
 	private Fachada fachada;
-	private List<Lutador> listaLutadorNaoPagaram;
+	private List<Lutador> listaLutadorPagaram;
 	
-	public AcaoListarLutardorEventoNaoPagaramAtualizado(){
+	public AcaoPrepararChavesDoEvento(){
 		fachada = Fachada.getInstanceFachada();
-		listaLutadorNaoPagaram = new ArrayList<Lutador>();
+		listaLutadorPagaram = new ArrayList<Lutador>();
 	}
 	
 	
@@ -28,17 +28,18 @@ public class AcaoListarLutardorEventoNaoPagaramAtualizado implements InterfaceAc
 			HttpServletResponse response) throws ServletException, IOException {
 		
 		Evento evento = new Evento();
-		//recupera o id do evento dos lutadores que não pagaram pelo sistema de atributos
-		int idEvento = (int) request.getAttribute("idEvento");
+		//recupera o id do evento dos lutadores que não pagaram
+		int idEvento = Integer.parseInt(request.getParameter("id"));
 		evento.setId(idEvento);
 		//faz a consulta no banco de dados dos lutares que ñao pagaram
-		listaLutadorNaoPagaram = fachada.controler.pegarIdLutadorNomeLutadorCpfEventoNaoPagaram(evento);
-		
-		request.setAttribute("listaLutador", listaLutadorNaoPagaram);
+		listaLutadorPagaram = fachada.controler.pegarIdLutadorNomeLutadorCpfEventoPagaram(evento);
+		System.out.println("listar ok");
+		request.setAttribute("listaLutador", listaLutadorPagaram);
 		request.setAttribute("evento", evento);
+		System.out.println("listar ok");
 		
 		RequestDispatcher dispatcher = 
-				request.getRequestDispatcher("TelaGerenciarEvento-Nao-Pagaram.jsp");
+				request.getRequestDispatcher("TelaGerenciarEventoPagaram.jsp");
 		dispatcher.forward(request, response);
 		
 

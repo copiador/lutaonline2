@@ -13,14 +13,7 @@
 						<li><a href="Controladora2?acao=logount">Sair</a></li>
 					</ul>
 				</nav>
-				<div class="tab-content">
-					<div class="tab-pane active" id="tab1">
-						<p>I'm in Section 1.</p>
-					</div>
-					<div class="tab-pane" id="tab2">
-						<p>Howdy, I'm in Section 2.</p>
-					</div>
-				</div>
+				
 			</div>
 		</div>
 		

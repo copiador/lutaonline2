@@ -33,9 +33,10 @@ public class AcaoListarLutardorEventoPagaram implements InterfaceAcao {
 		evento.setId(idEvento);
 		//faz a consulta no banco de dados dos lutares que ñao pagaram
 		listaLutadorPagaram = fachada.controler.pegarIdLutadorNomeLutadorCpfEventoPagaram(evento);
-		
+		System.out.println("listar ok");
 		request.setAttribute("listaLutador", listaLutadorPagaram);
 		request.setAttribute("evento", evento);
+		System.out.println("listar ok");
 		
 		RequestDispatcher dispatcher = 
 				request.getRequestDispatcher("TelaGerenciarEventoPagaram.jsp");

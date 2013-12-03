@@ -32,7 +32,7 @@ public class ControladorEventoLutador implements InterfaceEventoLutador {
 	@Override
 	public List<Lutador> pegarIdLutadorNomeLutadorCpfEventoPagaram(Evento evento) {
 		
-		return rp.pegarIdLutadorNomeLutadorCpfEventoNaoPagaram(evento);
+		return rp.pegarIdLutadorNomeLutadorCpfEventoPagaram(evento);
 	}
 
 	@Override

@@ -113,7 +113,7 @@ public class Controler implements InterfaceControlador{
 	@Override
 	public List<Lutador> pegarIdLutadorNomeLutadorCpfEventoPagaram(Evento evento) {
 		
-		return controladorEventoLutador.pegarIdLutadorNomeLutadorCpfEventoNaoPagaram(evento);
+		return controladorEventoLutador.pegarIdLutadorNomeLutadorCpfEventoPagaram(evento);
 	}
 	@Override
 	public void atualizaPagamentoLutador(Lutador lutador) {
