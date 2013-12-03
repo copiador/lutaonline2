@@ -92,4 +92,45 @@ public class RepositorioEventoLutadorJDBC implements InterfaceEventoLutador {
 		return pegarIdLutadorNomeLutadorCpfEventoNaoPagaram;
 	}
 
+	@Override
+	public List<Lutador> pegarIdLutadorNomeLutadorCpfEventoPagaram(Evento evento) {
+		List<Lutador> pegarIdLutadorNomeLutadorCpfEventoPagaram = new ArrayList<Lutador>();
+
+		String sql = "SELECT DISTINCT(TB_LUTADOR.ID) AS ID_LUTADOR, TB_LUTADOR.CPF " +
+				"AS CPF_LUTADOR, TB_LUTADOR.NOME, TB_LUTA_EVENTO.PAGAMENTO FROM " +
+				"TB_LUTADOR INNER JOIN TB_LUTA_EVENTO ON TB_LUTA_EVENTO.LUT_ID = " +
+				"TB_LUTADOR.ID AND TB_LUTA_EVENTO.EV_ID = ?" +
+				" AND TB_LUTA_EVENTO.PAGAMENTO = 1;";
+		try {
+
+			PreparedStatement stmt = GerenteConexaoJDBC.getConexao()
+					.prepareStatement(sql);
+			stmt.setInt(1, evento.getId());
+			ResultSet rs = stmt.executeQuery();
+
+			while (rs.next()) {
+
+				int idLutador = rs.getInt("id_lutador");
+				String cpfLutador = rs.getString("cpf_lutador");
+				String nomeLutador = rs.getString("nome");
+				int pagamento = rs.getInt("pagamento");
+
+				
+				Lutador lutador = new Lutador();
+				
+				
+				lutador.setId(idLutador);
+				lutador.setCpf(cpfLutador);
+				lutador.setNome(nomeLutador);
+				
+				// adiciona na lista
+				pegarIdLutadorNomeLutadorCpfEventoPagaram.add(lutador);
+
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return pegarIdLutadorNomeLutadorCpfEventoPagaram;
+	}
+
 }

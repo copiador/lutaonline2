@@ -9,5 +9,6 @@ public interface InterfaceEventoLutador {
 	
 	public List<Lutador> pegarIdLutadoresIdEventoNaoPagaram(Evento evento);
 	public List<Lutador> pegarIdLutadorNomeLutadorCpfEventoNaoPagaram(Evento evento);
+	public List<Lutador> pegarIdLutadorNomeLutadorCpfEventoPagaram(Evento evento);
 
 }
