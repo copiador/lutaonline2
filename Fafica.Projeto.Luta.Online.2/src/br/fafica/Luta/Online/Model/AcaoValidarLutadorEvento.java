@@ -14,13 +14,13 @@ public class AcaoValidarLutadorEvento implements InterfaceAcao {
 	
 	private Fachada fachada;
 	private Lutador lutador;
-	private Evento evento;
+	
 	
 	
 	public AcaoValidarLutadorEvento(){
 		fachada = Fachada.getInstanceFachada();
 		lutador = new Lutador();
-		evento = new Evento();
+		
 	}
 	
 

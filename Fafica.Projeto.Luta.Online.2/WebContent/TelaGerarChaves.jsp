@@ -1,12 +1,25 @@
 <%@include file="topAdm.jsp"%>
-
 <div id="main">
-
+	<h3>TELA GERAR CHAVES DO EVENTO: </h3>
+	<fieldset class="thumbnail inner-border">
+	
+	<div id="form">
+	
+	<form action="Controladora2" method="get">
+		CHAVE FAIXA: <input type="button" value="BRANCA"><br>
+		CHAVE FAIXA: <input type="button" value="AZUL"><br> 
+		CHAVE FAIXA: <input type="button" value="ROXA"><br> 
+		CHAVE FAIXA: <input type="button" value="MAROM"><br> 
+		CHAVE FAIXA: <input type="button" value="PRETA"><br>
+	</form>
+	
+	</div>
+	</fieldset>
+	<div id="listaLutadoresEvento">
+	
 	<fieldset class="thumbnail inner-border">
 	${mensagem}
 
-	
-	
 		<table class="table table-bordered">
 			<thead>
 				<tr>
@@ -20,7 +33,7 @@
 			<c:if test="${empty listaLutador}">
 				<tr>
 					<td align="center">
-						<p>Não consta nenhum lutador pagou</p>
+						<p>Não consta nenhum lutador que não pagou</p>
 					</td>
 				</tr>
 			</c:if>
@@ -44,8 +57,6 @@
 		</table>
 
 	</fieldset>
-
-
+	</div>
 </div>
-
 <%@include file="bot.jsp"%>

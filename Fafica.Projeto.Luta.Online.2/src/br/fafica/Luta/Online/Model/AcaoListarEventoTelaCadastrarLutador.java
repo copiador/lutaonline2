@@ -31,6 +31,7 @@ public class AcaoListarEventoTelaCadastrarLutador implements InterfaceAcao {
 		
 		request.setAttribute("eventos", listaEvento);
 		
+		
 		RequestDispatcher dispatcher = 
 				request.getRequestDispatcher("TelaCadastroDeAtletasAdministrador.jsp");
 		dispatcher.forward(request, response);
