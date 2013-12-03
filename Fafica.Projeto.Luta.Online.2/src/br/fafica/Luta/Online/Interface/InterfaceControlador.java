@@ -23,5 +23,7 @@ public interface InterfaceControlador {
 //Usuario
 	public List<Usuario> ListarUsuario();
 	public void cadastrarUsuario(Usuario usuario);
+//Evento Lutador	
+	public List<Lutador> pegarLutadoresDoEventoNaoPagaram(Evento evento);
 	
 }

@@ -13,11 +13,13 @@ public class Controler implements InterfaceControlador{
 	private ControladorLutador controleLutador;
 	private ControladorEvento controladorEvento;
 	private ControladorUsuario controladorUsuario;
+	private ControladorEventoLutador controladorEventoLutador;
 
 	public Controler(){
 		this.controleLutador = new ControladorLutador();
 		this.controladorEvento = new ControladorEvento();
 		this.controladorUsuario = new ControladorUsuario();
+		this.controladorEventoLutador = new ControladorEventoLutador();
 	
 	}
 	//Lutador
@@ -93,6 +95,14 @@ public class Controler implements InterfaceControlador{
 	public void cadastrarUsuario(Usuario usuario) {
 		controladorUsuario.cadastrarUsuario(usuario);
 		
+	}
+	
+	//EVENTO LUTADOR
+	
+	@Override
+	public List<Lutador> pegarLutadoresDoEventoNaoPagaram(Evento evento) {
+		
+		return controladorEventoLutador.pegarLutadoresDoEventoNaoPagaram(evento);
 	}
 
 
