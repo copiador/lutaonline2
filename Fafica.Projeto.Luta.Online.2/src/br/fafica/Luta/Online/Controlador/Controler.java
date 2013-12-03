@@ -115,6 +115,11 @@ public class Controler implements InterfaceControlador{
 		
 		return controladorEventoLutador.pegarIdLutadorNomeLutadorCpfEventoNaoPagaram(evento);
 	}
+	@Override
+	public void atualizaPagamentoLutador(Lutador lutador) {
+		controladorEventoLutador.atualizaPagamentoLutador(lutador);
+		
+	}
 
 
 	

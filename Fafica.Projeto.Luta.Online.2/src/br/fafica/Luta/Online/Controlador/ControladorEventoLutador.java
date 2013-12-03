@@ -35,4 +35,10 @@ public class ControladorEventoLutador implements InterfaceEventoLutador {
 		return rp.pegarIdLutadorNomeLutadorCpfEventoNaoPagaram(evento);
 	}
 
+	@Override
+	public void atualizaPagamentoLutador(Lutador lutador) {
+		rp.atualizaPagamentoLutador(lutador);
+		
+	}
+
 }

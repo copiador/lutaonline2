@@ -133,4 +133,23 @@ public class RepositorioEventoLutadorJDBC implements InterfaceEventoLutador {
 		return pegarIdLutadorNomeLutadorCpfEventoPagaram;
 	}
 
+	@Override
+	public void atualizaPagamentoLutador(Lutador lutador) {
+		try {
+
+			PreparedStatement ps = GerenteConexaoJDBC
+					.getConexao()
+					.prepareStatement(
+							"UPDATE TB_LUTA_EVENTO SET PAGAMENTO = 1 WHERE LUT_ID = ?;");
+
+			ps.setInt(1, lutador.getId());
+			
+			ps.executeUpdate();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
 }

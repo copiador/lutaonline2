@@ -27,4 +27,6 @@ public interface InterfaceControlador {
 	public List<Lutador> pegarIdLutadoresIdEventoNaoPagaram(Evento evento);
 	public List<Lutador> pegarIdLutadorNomeLutadorCpfEventoNaoPagaram(Evento evento);
 	public List<Lutador> pegarIdLutadorNomeLutadorCpfEventoPagaram(Evento evento);
+	public void atualizaPagamentoLutador(Lutador lutador);
+	
 }

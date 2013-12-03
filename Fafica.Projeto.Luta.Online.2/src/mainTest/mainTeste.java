@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.fafica.Luta.Online.Fachada.Fachada;
-import br.fafica.Luta.Online.Model.Evento;
 import br.fafica.Luta.Online.Model.Lutador;
 
 public class mainTeste {
@@ -14,15 +13,12 @@ public class mainTeste {
 
 		Fachada fachada = Fachada.getInstanceFachada();
 
-		Evento evento = new Evento();
-		evento.setId(6);
+		Lutador lutador = new Lutador();
+		lutador.setId(68);
 
-		listaLutadoresEvento = fachada.controler.pegarIdLutadorNomeLutadorCpfEventoNaoPagaram(evento);
+		fachada.controler.atualizaPagamentoLutador(lutador);
 		
-		for (Lutador lutador : listaLutadoresEvento) {
-			System.out.println(lutador.getId());
-			System.out.println(lutador.getNome());
-		}
+		
 		
 
 		// lutador.setNome("julia");
