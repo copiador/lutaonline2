@@ -17,10 +17,11 @@ public class mainTeste {
 		Evento evento = new Evento();
 		evento.setId(6);
 
-		listaLutadoresEvento = fachada.controler.pegarLutadoresDoEventoNaoPagaram(evento);
+		listaLutadoresEvento = fachada.controler.pegarIdLutadoresIdEventoNaoPagaram(evento);
 		
 		for (Lutador lutador : listaLutadoresEvento) {
 			System.out.println(lutador.getId());
+			System.out.println(lutador.getEvento().getNome());
 		}
 		
 

@@ -17,9 +17,9 @@ public class ControladorEventoLutador implements InterfaceEventoLutador {
 	}
 
 	@Override
-	public List<Lutador> pegarLutadoresDoEventoNaoPagaram(Evento evento) {
+	public List<Lutador> pegarIdLutadoresIdEventoNaoPagaram(Evento evento) {
 	
-		return rp.pegarLutadoresDoEventoNaoPagaram(evento);
+		return rp.pegarIdLutadoresIdEventoNaoPagaram(evento);
 	}
 
 }

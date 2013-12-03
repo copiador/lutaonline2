@@ -7,6 +7,6 @@ import br.fafica.Luta.Online.Model.Lutador;
 
 public interface InterfaceEventoLutador {
 	
-	public List<Lutador> pegarLutadoresDoEventoNaoPagaram(Evento evento);
+	public List<Lutador> pegarIdLutadoresIdEventoNaoPagaram(Evento evento);
 
 }

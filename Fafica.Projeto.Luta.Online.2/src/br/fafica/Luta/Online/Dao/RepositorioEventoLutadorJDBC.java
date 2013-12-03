@@ -12,7 +12,7 @@ import br.fafica.Luta.Online.Model.Lutador;
 public class RepositorioEventoLutadorJDBC implements InterfaceEventoLutador {
 
 	@Override
-	public List<Lutador> pegarLutadoresDoEventoNaoPagaram(Evento evento) {
+	public List<Lutador> pegarIdLutadoresIdEventoNaoPagaram(Evento evento) {
 
 		List<Lutador> listaLutadoresDoEventoNaoPagaram = new ArrayList<Lutador>();
 		
