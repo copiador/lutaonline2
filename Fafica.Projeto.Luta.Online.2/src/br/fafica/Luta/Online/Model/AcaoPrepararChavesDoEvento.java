@@ -28,18 +28,23 @@ public class AcaoPrepararChavesDoEvento implements InterfaceAcao {
 			HttpServletResponse response) throws ServletException, IOException {
 		
 		Evento evento = new Evento();
+		Evento eventoCompleto = new Evento();
 		//recupera o id do evento dos lutadores que não pagaram
 		int idEvento = Integer.parseInt(request.getParameter("id"));
 		evento.setId(idEvento);
+		
 		//faz a consulta no banco de dados dos lutares que ñao pagaram
 		listaLutadorPagaram = fachada.controler.pegarIdLutadorNomeLutadorCpfEventoPagaram(evento);
-		System.out.println("listar ok");
+		//o evento completo possue o evento com todos os atributos
+		eventoCompleto = fachada.controler.buscarEventoID(evento);
+		//seta a lista de lutadores que já pagaram
 		request.setAttribute("listaLutador", listaLutadorPagaram);
-		request.setAttribute("evento", evento);
-		System.out.println("listar ok");
+		//seta o evento completo para pagina, para que se possa dar melhor visão ao usuario do que está se trabalhando
+		request.setAttribute("evento", eventoCompleto);
+	
 		
 		RequestDispatcher dispatcher = 
-				request.getRequestDispatcher("TelaGerenciarEventoPagaram.jsp");
+				request.getRequestDispatcher("TelaGerarChaves.jsp");
 		dispatcher.forward(request, response);
 		
 
