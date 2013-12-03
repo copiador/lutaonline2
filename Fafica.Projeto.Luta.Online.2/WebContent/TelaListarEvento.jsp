@@ -29,6 +29,9 @@
 					<td>${evento.nome}</td>
 					<td>${evento.data}</td>
 					<td><a href="Controladora2?acao=excluirEvento&id=${evento.id}">Excluir</a></td>
+					<td><a href="Controladora2?acao=listarLutadorEventoNaoPagaram&id=${evento.id}">Gerenciar-Nao-Pagaram</a></td>
+					<td><a href="Controladora2?acao=excluirEvento&id=${evento.id}">Gerenciar-Pagaram</a></td>
+					<td><a href="Controladora2?acao=excluirEvento&id=${evento.id}">Gerar Chaves</a></td>
 				</tr>
 
 			</c:forEach>
