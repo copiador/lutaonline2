@@ -29,8 +29,8 @@ public class RepositorioEventoLutadorJDBC implements InterfaceEventoLutador {
 			
 			while (rs.next()) {
 				
-				int idLutador = rs.getInt(1);
-				int idEvento = rs.getInt(2);
+				int idLutador = rs.getInt("id_lutador");
+				int idEvento = rs.getInt("id_evento");
 				
 				Evento eventoComID = new Evento();
 				Lutador lutador = new Lutador();
