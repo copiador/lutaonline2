@@ -22,4 +22,11 @@ public class ControladorEventoLutador implements InterfaceEventoLutador {
 		return rp.pegarIdLutadoresIdEventoNaoPagaram(evento);
 	}
 
+	@Override
+	public List<Lutador> pegarIdLutadorNomeLutadorCpfEventoNaoPagaram(
+			Evento evento) {
+		
+		return rp.pegarIdLutadorNomeLutadorCpfEventoNaoPagaram(evento);
+	}
+
 }

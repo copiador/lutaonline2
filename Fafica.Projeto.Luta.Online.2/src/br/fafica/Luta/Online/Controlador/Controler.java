@@ -104,6 +104,12 @@ public class Controler implements InterfaceControlador{
 		
 		return controladorEventoLutador.pegarIdLutadoresIdEventoNaoPagaram(evento);
 	}
+	@Override
+	public List<Lutador> pegarIdLutadorNomeLutadorCpfEventoNaoPagaram(
+			Evento evento) {
+		
+		return controladorEventoLutador.pegarIdLutadorNomeLutadorCpfEventoNaoPagaram(evento);
+	}
 
 
 	

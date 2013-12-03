@@ -25,5 +25,6 @@ public interface InterfaceControlador {
 	public void cadastrarUsuario(Usuario usuario);
 //Evento Lutador	
 	public List<Lutador> pegarIdLutadoresIdEventoNaoPagaram(Evento evento);
+	public List<Lutador> pegarIdLutadorNomeLutadorCpfEventoNaoPagaram(Evento evento);
 	
 }
