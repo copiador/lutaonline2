@@ -22,6 +22,7 @@ import br.fafica.Luta.Online.Model.AcaoListarEvento;
 import br.fafica.Luta.Online.Model.AcaoListarEventoTelaCadastrarLutador;
 import br.fafica.Luta.Online.Model.AcaoListarLutador;
 import br.fafica.Luta.Online.Model.AcaoListarLutardorEventoNaoPagaram;
+import br.fafica.Luta.Online.Model.AcaoListarLutardorEventoNaoPagaramAtualizado;
 import br.fafica.Luta.Online.Model.AcaoLogar;
 import br.fafica.Luta.Online.Model.AcaoLogount;
 import br.fafica.Luta.Online.Model.AcaoValidarLutadorEvento;
@@ -56,6 +57,7 @@ public class Controladora2 extends HttpServlet {
 		
 		acoes.put("listarLutadorEventoNaoPagaram", new AcaoListarLutardorEventoNaoPagaram());
 		acoes.put("validarPagamentoLutador", new AcaoValidarLutadorEvento());
+		acoes.put("listarLutadorEventoNaoPagaramAtualizado", new AcaoListarLutardorEventoNaoPagaramAtualizado());
 		
 	}
 

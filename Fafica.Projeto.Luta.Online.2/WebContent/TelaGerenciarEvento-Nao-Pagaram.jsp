@@ -4,6 +4,9 @@
 
 	<fieldset class="thumbnail inner-border">
 	${mensagem}
+
+	
+	
 		<table class="table table-bordered">
 			<thead>
 				<tr>
@@ -17,10 +20,12 @@
 			<c:if test="${empty listaLutador}">
 				<tr>
 					<td align="center">
-						<p>Nenhum Evento Cadastrado</p>
+						<p>Não consta nenhum lutador que não pagou</p>
 					</td>
 				</tr>
 			</c:if>
+			
+			
 
 			<c:forEach items="${listaLutador}" var="lutador">
 
@@ -29,9 +34,9 @@
 					<td>${lutador.id}</td>
 					<td>${lutador.nome}</td>
 					<td>${lutador.cpf}</td>
-					<td><a href="Controladora2?acao=validarPagamentoLutador&id=${lutador.id}">Validar Pagamento</a></td>
+					<td><a href="Controladora2?acao=validarPagamentoLutador&idLutador=${lutador.id}&IdEvento=${evento.id}">Validar Pagamento</a></td>
 				</tr>
-
+			
 			</c:forEach>
 
 
