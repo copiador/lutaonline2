@@ -37,6 +37,7 @@
 						<th>NOME</th>
 						<th>CPF</th>
 						<th>FAIXA</th>
+						<th>SEXO</th>
 						<th>PAGAMENTO</th>
 					</tr>
 				</thead>
@@ -59,6 +60,7 @@
 						<td>${lutador.nome}</td>
 						<td>${lutador.cpf}</td>
 						<td>${lutador.faixa}</td>
+						<td>${lutador.sexo}</td>
 						<td>OK</td>
 
 					</tr>

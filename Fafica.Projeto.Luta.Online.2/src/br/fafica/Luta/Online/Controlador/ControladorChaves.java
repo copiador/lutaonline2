@@ -44,4 +44,46 @@ public class ControladorChaves implements InterfaceChaves {
 		// TODO Auto-generated method stub
 		return chavesDasLutas.setChaveRoxa(listaLutador);
 	}
+
+	@Override
+	public List<Lutador> embaralhaLutador(List<Lutador> listaLutador) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Lutador> setFaseParteA(List<Lutador> listaLutador) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Lutador> setFaseParteB(List<Lutador> listaLutador) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Lutador> setFaseParteC(List<Lutador> listaLutador) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Lutador> setFaseParteD(List<Lutador> listaLutador) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Lutador> setFaseParteE(List<Lutador> listaLutador) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Lutador> ganhadores(List<Lutador> listaLutador) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

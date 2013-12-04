@@ -57,7 +57,7 @@ public class AcaoPrepararChavesDoEventoFaixaPreta implements InterfaceAcao {
 		request.setAttribute("evento", eventoCompleto);
 
 		RequestDispatcher dispatcher = request
-				.getRequestDispatcher("TelaGerarChaves.jsp");
+				.getRequestDispatcher("TelaChaves.jsp");
 		dispatcher.forward(request, response);
 
 	}

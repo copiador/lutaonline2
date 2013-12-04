@@ -1,7 +1,10 @@
 package br.fafica.Luta.Online.Model;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+
+import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Collections;
 
 import br.fafica.Luta.Online.Interface.InterfaceChaves;
 
@@ -59,7 +62,7 @@ public class ChavesFases implements InterfaceChaves{
 	public void setGanhadores(List<Lutador> ganhadores) {
 		this.ganhadores = ganhadores;
 	}
-
+//SET METODOS CHAVES
 	@Override
 	public List<Lutador> setChavePreta(List<Lutador> listaLutador) {
 		// TODO Auto-generated method stub
@@ -86,6 +89,50 @@ public class ChavesFases implements InterfaceChaves{
 
 	@Override
 	public List<Lutador> setChaveRoxa(List<Lutador> listaLutador) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	//METODO FASES
+	
+	@Override
+	public List<Lutador> embaralhaLutador(List<Lutador> listaLutador) {
+		
+		return null;
+	}
+
+	@Override
+	public List<Lutador> setFaseParteA(List<Lutador> listaLutador) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Lutador> setFaseParteB(List<Lutador> listaLutador) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Lutador> setFaseParteC(List<Lutador> listaLutador) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Lutador> setFaseParteD(List<Lutador> listaLutador) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Lutador> setFaseParteE(List<Lutador> listaLutador) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Lutador> ganhadores(List<Lutador> listaLutador) {
 		// TODO Auto-generated method stub
 		return null;
 	}
