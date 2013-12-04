@@ -27,6 +27,7 @@ import br.fafica.Luta.Online.Model.AcaoListarLutardorEventoPagaram;
 import br.fafica.Luta.Online.Model.AcaoLogar;
 import br.fafica.Luta.Online.Model.AcaoLogount;
 import br.fafica.Luta.Online.Model.AcaoPrepararChavesDoEvento;
+import br.fafica.Luta.Online.Model.AcaoPrepararChavesDoEventoFaixaPreta;
 import br.fafica.Luta.Online.Model.AcaoValidarLutadorEvento;
 
 
@@ -63,6 +64,7 @@ public class Controladora2 extends HttpServlet {
 		acoes.put("listarLutadorEventoPagaram", new AcaoListarLutardorEventoPagaram());
 		
 		acoes.put("prepararChavesDoEvento", new AcaoPrepararChavesDoEvento());
+		acoes.put("prepararChavesDoEventoFaixaPreta", new AcaoPrepararChavesDoEventoFaixaPreta());
 	}
 
 	/**
