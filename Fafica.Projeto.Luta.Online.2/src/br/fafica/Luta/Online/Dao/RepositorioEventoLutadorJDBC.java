@@ -72,7 +72,7 @@ public class RepositorioEventoLutadorJDBC implements InterfaceEventoLutador {
 				int idLutador = rs.getInt("id_lutador");
 				String cpfLutador = rs.getString("cpf_lutador");
 				String nomeLutador = rs.getString("nome");
-				int pagamento = rs.getInt("pagamento");
+				//futuramente eu uso isso: int pagamento = rs.getInt("pagamento");
 
 				
 				Lutador lutador = new Lutador();
@@ -113,7 +113,7 @@ public class RepositorioEventoLutadorJDBC implements InterfaceEventoLutador {
 				int idLutador = rs.getInt("id_lutador");
 				String cpfLutador = rs.getString("cpf_lutador");
 				String nomeLutador = rs.getString("nome");
-				int pagamento = rs.getInt("pagamento");
+				// futuramente eu uso isso: int pagamento = rs.getInt("pagamento");
 
 				
 				Lutador lutador = new Lutador();
