@@ -30,6 +30,10 @@ public interface InterfaceControlador {
 	public void atualizaPagamentoLutador(Lutador lutador);
 	//chaves
 	public List<Lutador> setChavePreta(List<Lutador> listaLutador);
+	public List<Lutador> setChaveAzul(List<Lutador> listaLutador);
+	public List<Lutador> setChaveBranca(List<Lutador> listaLutador);
+	public List<Lutador> setChaveMarrom(List<Lutador> listaLutador);
+	public List<Lutador> setChaveRoxa(List<Lutador> listaLutador);
 	
 	
 }

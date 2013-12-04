@@ -65,6 +65,30 @@ public class ChavesFases implements InterfaceChaves{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public List<Lutador> setChaveAzul(List<Lutador> listaLutador) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Lutador> setChaveBranca(List<Lutador> listaLutador) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Lutador> setChaveMarrom(List<Lutador> listaLutador) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Lutador> setChaveRoxa(List<Lutador> listaLutador) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 	

@@ -127,6 +127,26 @@ public class Controler implements InterfaceControlador{
 		
 		return controladorChaves.setChavePreta(listaLutador) ;
 	}
+	@Override
+	public List<Lutador> setChaveAzul(List<Lutador> listaLutador) {
+		// TODO Auto-generated method stub
+		return controladorChaves.setChaveAzul(listaLutador);
+	}
+	@Override
+	public List<Lutador> setChaveBranca(List<Lutador> listaLutador) {
+		// TODO Auto-generated method stub
+		return controladorChaves.setChaveBranca(listaLutador);
+	}
+	@Override
+	public List<Lutador> setChaveMarrom(List<Lutador> listaLutador) {
+		// TODO Auto-generated method stub
+		return controladorChaves.setChaveMarrom(listaLutador);
+	}
+	@Override
+	public List<Lutador> setChaveRoxa(List<Lutador> listaLutador) {
+		// TODO Auto-generated method stub
+		return controladorChaves.setChaveRoxa(listaLutador);
+	}
 	
 	
 	

@@ -78,6 +78,58 @@ public class ChavesLutas implements InterfaceChaves{
 		}
 		return listaLutadorFaixaPreta;
 	}
+
+
+	@Override
+	public List<Lutador> setChaveAzul(List<Lutador> listaLutador) {
+		for (Lutador lutador : listaLutador) {
+			String faixaLutador = lutador.getFaixa();
+			if(faixaLutador.equalsIgnoreCase("azul")){
+				listaLutadorFaixaPreta.add(lutador);
+			}
+			
+		}
+		return listaLutadorFaixaAzul;
+	}
+
+
+	@Override
+	public List<Lutador> setChaveBranca(List<Lutador> listaLutador) {
+		for (Lutador lutador : listaLutador) {
+			String faixaLutador = lutador.getFaixa();
+			if(faixaLutador.equalsIgnoreCase("branca")){
+				listaLutadorFaixaPreta.add(lutador);
+			}
+			
+		}
+		return listaLutadorFaixaBranca;
+	}
+
+
+	@Override
+	public List<Lutador> setChaveMarrom(List<Lutador> listaLutador) {
+		for (Lutador lutador : listaLutador) {
+			String faixaLutador = lutador.getFaixa();
+			if(faixaLutador.equalsIgnoreCase("marrom")){
+				listaLutadorFaixaPreta.add(lutador);
+			}
+			
+		}
+		return listaLutadorFaixaMarrom;
+	}
+
+
+	@Override
+	public List<Lutador> setChaveRoxa(List<Lutador> listaLutador) {
+		for (Lutador lutador : listaLutador) {
+			String faixaLutador = lutador.getFaixa();
+			if(faixaLutador.equalsIgnoreCase("Roxa")){
+				listaLutadorFaixaPreta.add(lutador);
+			}
+			
+		}
+		return listaLutadorFaixaRoxa;
+	}
 	
 	
 
