@@ -1,10 +1,8 @@
 package br.fafica.Luta.Online.Model;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
-
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Collections;
+import java.util.Collections;
 
 import br.fafica.Luta.Online.Interface.InterfaceChaves;
 
@@ -98,7 +96,10 @@ public class ChavesFases implements InterfaceChaves{
 	@Override
 	public List<Lutador> embaralhaLutador(List<Lutador> listaLutador) {
 		
-		return null;
+		Collections.reverse(listaLutador);
+		Collections.shuffle(listaLutador);
+		
+		return listaLutador;
 	}
 
 	@Override

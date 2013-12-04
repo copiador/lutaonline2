@@ -29,12 +29,19 @@ public interface InterfaceControlador {
 	public List<Lutador> pegarIdLutadorNomeLutadorCpfEventoNaoPagaram(Evento evento);
 	public List<Lutador> pegarIdLutadorNomeLutadorCpfEventoPagaram(Evento evento);
 	public void atualizaPagamentoLutador(Lutador lutador);
-	//chaves
+//chaves
 	public List<Lutador> setChavePreta(List<Lutador> listaLutador);
 	public List<Lutador> setChaveAzul(List<Lutador> listaLutador);
 	public List<Lutador> setChaveBranca(List<Lutador> listaLutador);
 	public List<Lutador> setChaveMarrom(List<Lutador> listaLutador);
 	public List<Lutador> setChaveRoxa(List<Lutador> listaLutador);
-	
+//Parte das Lutas
+	public List<Lutador> embaralhaLutador(List<Lutador> listaLutador);
+	public List<Lutador> setFaseParteA(List<Lutador> listaLutador);
+	public List<Lutador> setFaseParteB(List<Lutador> listaLutador);
+	public List<Lutador> setFaseParteC(List<Lutador> listaLutador);
+	public List<Lutador> setFaseParteD(List<Lutador> listaLutador);
+	public List<Lutador> setFaseParteE(List<Lutador> listaLutador);
+	public List<Lutador> ganhadores(List<Lutador> listaLutador);
 	
 }

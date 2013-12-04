@@ -156,6 +156,43 @@ public class Controler implements InterfaceControlador{
 		// TODO Auto-generated method stub
 		return controladorChaves.setChaveRoxa(listaLutador);
 	}
+	@Override
+	
+	//parte das lutas
+	public List<Lutador> embaralhaLutador(List<Lutador> listaLutador) {
+		
+		return controladorChaves.embaralhaLutador(listaLutador);
+	}
+	@Override
+	public List<Lutador> setFaseParteA(List<Lutador> listaLutador) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<Lutador> setFaseParteB(List<Lutador> listaLutador) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<Lutador> setFaseParteC(List<Lutador> listaLutador) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<Lutador> setFaseParteD(List<Lutador> listaLutador) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<Lutador> setFaseParteE(List<Lutador> listaLutador) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<Lutador> ganhadores(List<Lutador> listaLutador) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 	
 	

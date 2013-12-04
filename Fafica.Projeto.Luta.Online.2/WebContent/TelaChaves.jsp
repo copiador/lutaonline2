@@ -3,8 +3,10 @@
 	<h5>TELA CHAVES:</h5>
 	<h2>${evento.nome}</h2>
 	<fieldset class="thumbnail inner-border">
-		<c:forEach items="${listaLutador}" var="lutador">
-
+	
+		<c:forEach items="${listaLutador}" varStatus="status" var="lutador">
+			
+			
 			<div class="chaves">${lutador.id}${lutador.nome}${lutador.cpf}</div>
 
 

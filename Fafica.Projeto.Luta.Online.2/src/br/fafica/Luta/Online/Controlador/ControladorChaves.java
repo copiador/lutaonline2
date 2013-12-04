@@ -47,8 +47,8 @@ public class ControladorChaves implements InterfaceChaves {
 
 	@Override
 	public List<Lutador> embaralhaLutador(List<Lutador> listaLutador) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return chavesDasLutas.embaralhaLutador(listaLutador);
 	}
 
 	@Override
