@@ -3,16 +3,18 @@ package br.fafica.Luta.Online.Controlador;
 import java.util.List;
 
 import br.fafica.Luta.Online.Interface.InterfaceChaves;
+import br.fafica.Luta.Online.Model.ChavesFases;
 import br.fafica.Luta.Online.Model.ChavesLutas;
 import br.fafica.Luta.Online.Model.Lutador;
 
 public class ControladorChaves implements InterfaceChaves {
 
-	private InterfaceChaves chavesDasLutas;
+	private ChavesLutas chavesDasLutas;
+	private ChavesFases fasesDasLutas;
 	
 	public ControladorChaves() {
 		chavesDasLutas = new ChavesLutas();
-		
+		fasesDasLutas = new ChavesFases();
 		
 	}
 
@@ -47,8 +49,8 @@ public class ControladorChaves implements InterfaceChaves {
 
 	@Override
 	public List<Lutador> embaralhaLutador(List<Lutador> listaLutador) {
-		
-		return chavesDasLutas.embaralhaLutador(listaLutador);
+	
+		return fasesDasLutas.embaralhaLutador(listaLutador);
 	}
 
 	@Override

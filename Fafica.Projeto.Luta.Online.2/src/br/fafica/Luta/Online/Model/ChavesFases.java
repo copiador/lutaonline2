@@ -98,6 +98,10 @@ public class ChavesFases implements InterfaceChaves{
 		
 		Collections.reverse(listaLutador);
 		Collections.shuffle(listaLutador);
+		System.out.println("chegou aqui embaralha");
+		for (Lutador lutador : listaLutador) {
+			System.out.println(lutador.getNome());
+		}
 		
 		return listaLutador;
 	}

@@ -18,12 +18,14 @@ public class AcaoPrepararChavesDoEventoFaixaPreta implements InterfaceAcao {
 	private List<Lutador> listaLutadorPagaram;
 	private List<Lutador> listaLutadorPagaramAtributosCompletos;
 	private List<Lutador> listaLutadorPagaramFaixaPreta;
+	private List<Lutador> listaLutadorPagaramFaixaPretaEmbaralhado;
 
 	public AcaoPrepararChavesDoEventoFaixaPreta() {
 		fachada = Fachada.getInstanceFachada();
 		listaLutadorPagaram = new ArrayList<Lutador>();
 		listaLutadorPagaramAtributosCompletos = new ArrayList<Lutador>();
 		listaLutadorPagaramFaixaPreta = new ArrayList<Lutador>();
+		listaLutadorPagaramFaixaPretaEmbaralhado = new ArrayList<Lutador>();
 	}
 
 	@Override
@@ -41,17 +43,16 @@ public class AcaoPrepararChavesDoEventoFaixaPreta implements InterfaceAcao {
 		// pegar todos os lutadores com os atributos completos
 		listaLutadorPagaramAtributosCompletos = fachada.controler
 				.selecionaTodosOsAtributosDoLutadorPeloID(listaLutadorPagaram);
-		for (Lutador lutador : listaLutadorPagaramAtributosCompletos) {
-			System.out.println(lutador.getFaixa());
-		}
-
+	
 		// pega a lista e seleciona apenas os faixa preta
 		listaLutadorPagaramFaixaPreta = fachada.controler
 				.setChavePreta(listaLutadorPagaramAtributosCompletos);
+		//pega a lista e embaralar ela
+		listaLutadorPagaramFaixaPretaEmbaralhado = fachada.controler.embaralhaLutador(listaLutadorPagaramFaixaPreta);
 		// pega o evento completo possue o evento com todos os atributos
 		eventoCompleto = fachada.controler.buscarEventoID(evento);
 		// seta a lista de lutadores que já pagaram FAIXA PRETA
-		request.setAttribute("listaLutador", listaLutadorPagaramFaixaPreta);
+		request.setAttribute("listaLutador", listaLutadorPagaramFaixaPretaEmbaralhado);
 		// seta o evento completo para pagina, para que se possa dar melhor
 		// visão ao usuario do que está se trabalhando
 		request.setAttribute("evento", eventoCompleto);
