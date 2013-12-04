@@ -36,6 +36,7 @@
 						<th>ID</th>
 						<th>NOME</th>
 						<th>CPF</th>
+						<th>FAIXA</th>
 						<th>PAGAMENTO</th>
 					</tr>
 				</thead>

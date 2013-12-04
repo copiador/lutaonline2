@@ -21,12 +21,11 @@ public class mainTeste {
 		Lutador lutador4 = new Lutador();
 		Lutador lutador5 = new Lutador();
 		
-		lutador.setFaixa("preta");
-		lutador1.setFaixa("roxa");
-		lutador2.setFaixa("branca");
-		lutador3.setFaixa("Preta");
-		lutador4.setFaixa("Marrom");
-		lutador5.setFaixa("Preta");
+		
+		
+
+		lutador4.setId(83);
+		lutador5.setId(84);
 		
 		listaLutadores.add(lutador);
 		listaLutadores.add(lutador1);
@@ -36,9 +35,10 @@ public class mainTeste {
 		listaLutadores.add(lutador5);
 		
 
-		listaLutadoresFaixaPreta = fachada.controler.setChavePreta(listaLutadores);
+		listaLutadoresFaixaPreta = fachada.controler.selecionaTodosOsAtributosDoLutadorPeloID(listaLutadores);
 		
 		for (Lutador lutador6 : listaLutadoresFaixaPreta) {
+			System.out.println(lutador6.getNome());
 			System.out.println(lutador6.getId());
 			System.out.println(lutador6.getFaixa());
 		}

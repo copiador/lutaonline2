@@ -1,6 +1,6 @@
 <%@include file="topAdm.jsp"%>
 <div id="main">
-	<h5>TELA GERAR CHAVES DO EVENTO:</h5><h2>${evento.nome} </h2> 
+	<h5>TELA CHAVES:</h5><h2>${evento.nome} </h2> 
 	<fieldset class="thumbnail inner-border">
 	
 	

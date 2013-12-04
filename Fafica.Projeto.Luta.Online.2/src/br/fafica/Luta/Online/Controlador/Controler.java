@@ -65,6 +65,15 @@ public class Controler implements InterfaceControlador{
 		
 	}
 	
+	@Override
+	public List<Lutador> selecionaTodosOsAtributosDoLutadorPeloID(
+			List<Lutador> listalutador) {
+		
+		return controleLutador.selecionaTodosOsAtributosDoLutadorPeloID(listalutador);
+	}
+	
+	
+	
 	//eventos
 	
 	@Override
@@ -147,6 +156,7 @@ public class Controler implements InterfaceControlador{
 		// TODO Auto-generated method stub
 		return controladorChaves.setChaveRoxa(listaLutador);
 	}
+
 	
 	
 	

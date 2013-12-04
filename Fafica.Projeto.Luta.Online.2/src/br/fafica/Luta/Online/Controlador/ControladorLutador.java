@@ -57,6 +57,13 @@ public class ControladorLutador implements InterfaceLutador {
 		return rp.pegarUltimoLutadorCadastrado();
 	}
 
+	@Override
+	public List<Lutador> selecionaTodosOsAtributosDoLutadorPeloID(
+			List<Lutador> listalutador) {
+		
+		return rp.selecionaTodosOsAtributosDoLutadorPeloID(listalutador);
+	}
+
 	
 
 

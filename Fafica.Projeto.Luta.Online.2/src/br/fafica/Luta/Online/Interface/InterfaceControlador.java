@@ -15,6 +15,7 @@ public interface InterfaceControlador {
 	public Lutador buscarID(Lutador lutador);
 	public void cadastrarEventoLutador(Lutador lutador);
 	public Lutador pegarUltimoLutadorCadastrado();
+	public List<Lutador> selecionaTodosOsAtributosDoLutadorPeloID(List<Lutador>listalutador);
 //eventos
 	public void cadastrarEvento(Evento evento);
 	public void excluirEvento(Evento Evento);

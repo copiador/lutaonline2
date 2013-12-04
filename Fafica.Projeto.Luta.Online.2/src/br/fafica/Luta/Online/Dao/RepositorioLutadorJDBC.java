@@ -178,4 +178,50 @@ public class RepositorioLutadorJDBC implements InterfaceLutador {
 		}
 		return lutador;
 	}
+
+	@Override
+	public List<Lutador> selecionaTodosOsAtributosDoLutadorPeloID(
+			List<Lutador> listalutador) {
+		
+		String sql = "SELECT * FROM TB_LUTADOR WHERE ID = ?";
+		
+		List<Lutador> listaAtualizada = new ArrayList<Lutador>();
+
+		try {
+			for (Lutador lutador : listalutador) {
+			
+				PreparedStatement stmt = GerenteConexaoJDBC.getConexao().prepareStatement(sql);
+			
+				int id = lutador.getId();
+				stmt.setInt(1, id);
+				ResultSet rs = stmt.executeQuery();
+
+			while (rs.next()) {
+				
+				int idLutador = rs.getInt("id");
+				String nomeLutador = rs.getString("nome");
+				String sexoLutador = rs.getString("sexo");
+				String faixaLutador = rs.getString("faixa");
+				String cpfLutador = rs.getString("cpf");
+				
+				System.out.println(faixaLutador);
+				
+				Lutador lutadorCompleto = new Lutador();
+				
+				lutadorCompleto.setId(idLutador);
+				lutadorCompleto.setNome(nomeLutador);
+				lutadorCompleto.setSexo(sexoLutador);
+				lutadorCompleto.setFaixa(faixaLutador);
+				lutadorCompleto.setCpf(cpfLutador);
+				
+				listaAtualizada.add(lutadorCompleto);
+			}
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return listaAtualizada;
+
+		
+	}
 }

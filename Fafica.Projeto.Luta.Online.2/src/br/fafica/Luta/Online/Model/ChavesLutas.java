@@ -71,9 +71,12 @@ public class ChavesLutas implements InterfaceChaves{
 		//se o lutador da lista passada tiver faixa preta, adicione ele na lista de faixas prestas;
 		for (Lutador lutador : listaLutador) {
 			String faixaLutador = lutador.getFaixa();
-			if(faixaLutador.equalsIgnoreCase("preta")){
-				listaLutadorFaixaPreta.add(lutador);
+			if (faixaLutador != null){
+				if(faixaLutador.equalsIgnoreCase("preta")){
+					listaLutadorFaixaPreta.add(lutador);
+				}	
 			}
+			
 			
 		}
 		return listaLutadorFaixaPreta;
