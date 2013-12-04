@@ -14,13 +14,14 @@ public class Controler implements InterfaceControlador{
 	private ControladorEvento controladorEvento;
 	private ControladorUsuario controladorUsuario;
 	private ControladorEventoLutador controladorEventoLutador;
+	private ControladorChaves controladorChaves;
 
 	public Controler(){
 		this.controleLutador = new ControladorLutador();
 		this.controladorEvento = new ControladorEvento();
 		this.controladorUsuario = new ControladorUsuario();
 		this.controladorEventoLutador = new ControladorEventoLutador();
-	
+		this.controladorChaves = new ControladorChaves();
 	}
 	//Lutador
 	@Override
@@ -120,9 +121,12 @@ public class Controler implements InterfaceControlador{
 		controladorEventoLutador.atualizaPagamentoLutador(lutador);
 		
 	}
-
-
-	
+//CHAVES
+	@Override
+	public List<Lutador> setChavePreta(List<Lutador> listaLutador) {
+		
+		return controladorChaves.setChavePreta(listaLutador) ;
+	}
 	
 	
 	

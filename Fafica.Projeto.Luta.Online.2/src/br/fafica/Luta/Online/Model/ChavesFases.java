@@ -59,6 +59,12 @@ public class ChavesFases implements InterfaceChaves{
 	public void setGanhadores(List<Lutador> ganhadores) {
 		this.ganhadores = ganhadores;
 	}
+
+	@Override
+	public List<Lutador> setChavePreta(List<Lutador> listaLutador) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 	

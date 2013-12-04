@@ -15,6 +15,7 @@ public class ChavesLutas implements InterfaceChaves{
 	private List<Lutador> listaLutadorFaixaPreta;
 	
 	public ChavesLutas(){
+		
 		listaLutadorFaixaBranca = new ArrayList<Lutador>();
 		listaLutadorFaixaAzul = new ArrayList<Lutador>();
 		listaLutadorFaixaRoxa = new ArrayList<Lutador>();
@@ -62,6 +63,23 @@ public class ChavesLutas implements InterfaceChaves{
 	public void setListaLutadorFaixaPreta(List<Lutador> listaLutadorFaixaPreta) {
 		this.listaLutadorFaixaPreta = listaLutadorFaixaPreta;
 	}
+
+
+	@Override
+	public List<Lutador> setChavePreta(List<Lutador> listaLutador) {
+		
+		//se o lutador da lista passada tiver faixa preta, adicione ele na lista de faixas prestas;
+		for (Lutador lutador : listaLutador) {
+			String faixaLutador = lutador.getFaixa();
+			if(faixaLutador.equalsIgnoreCase("preta")){
+				listaLutadorFaixaPreta.add(lutador);
+			}
+			
+		}
+		return listaLutadorFaixaPreta;
+	}
+	
+	
 
 	
 
