@@ -39,13 +39,7 @@ public class AcaoPrepararChavesDoEvento implements InterfaceAcao {
 		listaLutadorPagaram = fachada.controler.pegarIdLutadorNomeLutadorCpfEventoPagaram(evento);
 		//pegar todos os atributos dos lutadores que pagaram o evento X;
 		listaLutadorPagaramAtributosCompletos = fachada.controler.selecionaTodosOsAtributosDoLutadorPeloID(listaLutadorPagaram);
-		for (Lutador lutador : listaLutadorPagaramAtributosCompletos) {
-			System.out.println("id" + lutador.getId());
-			System.out.println("nome" + lutador.getNome());
-			System.out.println("faixa"+lutador.getFaixa());
-		}
-		
-		
+			
 		//o evento completo possue o evento com todos os atributos
 		eventoCompleto = fachada.controler.buscarEventoID(evento);
 		//seta a lista de lutadores que já pagaram

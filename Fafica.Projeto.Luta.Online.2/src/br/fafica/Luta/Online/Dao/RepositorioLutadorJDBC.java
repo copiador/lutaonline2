@@ -204,7 +204,7 @@ public class RepositorioLutadorJDBC implements InterfaceLutador {
 				String faixaLutador = rs.getString("faixa");
 				String cpfLutador = rs.getString("cpf");
 				
-				System.out.println(faixaLutador);
+				
 				
 				Lutador lutadorCompleto = new Lutador();
 				

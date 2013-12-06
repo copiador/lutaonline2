@@ -96,13 +96,11 @@ public class ChavesFases implements InterfaceChaves{
 	@Override
 	public List<Lutador> embaralhaLutador(List<Lutador> listaLutador) {
 		
+		//usa 2 metodos para embaralhar a lista e retorna a lista embaralhda;
 		Collections.reverse(listaLutador);
 		Collections.shuffle(listaLutador);
-		System.out.println("chegou aqui embaralha");
-		for (Lutador lutador : listaLutador) {
-			System.out.println(lutador.getNome());
-		}
 		
+	
 		return listaLutador;
 	}
 

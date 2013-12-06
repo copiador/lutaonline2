@@ -67,7 +67,8 @@ public class ChavesLutas implements InterfaceChaves{
 
 	@Override
 	public List<Lutador> setChavePreta(List<Lutador> listaLutador) {
-		
+		//limpa-se a lista porque caso o usuario faça uma nova requisição não se usa a mesma lista.
+		listaLutadorFaixaPreta.clear();
 		//se o lutador da lista passada tiver faixa preta, adicione ele na lista de faixas prestas;
 		for (Lutador lutador : listaLutador) {
 			String faixaLutador = lutador.getFaixa();

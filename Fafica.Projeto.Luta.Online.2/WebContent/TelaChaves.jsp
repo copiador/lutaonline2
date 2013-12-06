@@ -1,31 +1,14 @@
 <%@include file="topAdm.jsp"%>
 <div id="main">
-	<h5>TELA CHAVES:</h5>
+	<h5>TELA GERAR CHAVES DO EVENTO:</h5>
 	<h2>${evento.nome}</h2>
 	<fieldset class="thumbnail inner-border">
-	
-		<c:forEach items="${listaLutador}" varStatus="status" var="lutador">
-			
-			
-			<div class="chaves">${lutador.id}${lutador.nome}${lutador.cpf}</div>
-
-
-		</c:forEach>
-
-
-
 
 	</fieldset>
-
-
 	<div id="listaLutadoresEvento">
 
-
-
-
-
 		<fieldset class="thumbnail inner-border">
-
+			${mensagem}
 
 			<table class="table table-bordered">
 				<thead>
@@ -33,9 +16,12 @@
 						<th>ID</th>
 						<th>NOME</th>
 						<th>CPF</th>
+						<th>FAIXA</th>
+						<th>SEXO</th>
 						<th>PAGAMENTO</th>
 					</tr>
 				</thead>
+				
 
 				<c:if test="${empty listaLutador}">
 					<tr>
@@ -49,12 +35,13 @@
 
 				<c:forEach items="${listaLutador}" var="lutador">
 
-
 					<tr class="error">
 
 						<td>${lutador.id}</td>
 						<td>${lutador.nome}</td>
 						<td>${lutador.cpf}</td>
+						<td>${lutador.faixa}</td>
+						<td>${lutador.sexo}</td>
 						<td>OK</td>
 
 					</tr>

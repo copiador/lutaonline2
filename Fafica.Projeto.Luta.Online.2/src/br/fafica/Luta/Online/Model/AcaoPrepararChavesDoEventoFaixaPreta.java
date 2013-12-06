@@ -53,6 +53,7 @@ public class AcaoPrepararChavesDoEventoFaixaPreta implements InterfaceAcao {
 		eventoCompleto = fachada.controler.buscarEventoID(evento);
 		// seta a lista de lutadores que já pagaram FAIXA PRETA
 		request.setAttribute("listaLutador", listaLutadorPagaramFaixaPretaEmbaralhado);
+				
 		// seta o evento completo para pagina, para que se possa dar melhor
 		// visão ao usuario do que está se trabalhando
 		request.setAttribute("evento", eventoCompleto);
@@ -60,6 +61,8 @@ public class AcaoPrepararChavesDoEventoFaixaPreta implements InterfaceAcao {
 		RequestDispatcher dispatcher = request
 				.getRequestDispatcher("TelaChaves.jsp");
 		dispatcher.forward(request, response);
+		
+		
 
 	}
 
